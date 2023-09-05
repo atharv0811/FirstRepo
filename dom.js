@@ -30,6 +30,9 @@ let elemets = document.getElementsByClassName('list-group-item');
 // console.log(elemets[1]);
 // elemets[1].textContent = 'Hello2';
 // elemets[1].style.backgroundColor = 'yellow';
+elemets[4].style.backgroundColor = 'yellow';
+
+
 
 let items = document.getElementsByClassName("title");
 items[0].style.fontWeight = 'bold';
@@ -43,10 +46,9 @@ let li = document.getElementsByTagName('li');
 // console.log(li[1]);
 // li[1].textContent = 'hello2';
 li[2].style.backgroundColor = '#008000';
+li[4].style.backgroundColor = '#008000';
 // li[2].style.fontWeight = 'bold';
 for (let i = 0; i < li.length; i++) {
     li[i].style.fontWeight = 'bold';
 }
-
-
 
