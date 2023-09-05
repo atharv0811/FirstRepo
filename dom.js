@@ -36,5 +36,17 @@ items[0].style.fontWeight = 'bold';
 items[0].style.color = 'green';
 
 
+//GETELEMENTSBYTAGNAME
+
+let li = document.getElementsByTagName('li');
+// console.log(li);
+// console.log(li[1]);
+// li[1].textContent = 'hello2';
+li[2].style.backgroundColor = '#008000';
+// li[2].style.fontWeight = 'bold';
+for (let i = 0; i < li.length; i++) {
+    li[i].style.fontWeight = 'bold';
+}
+
 
 
