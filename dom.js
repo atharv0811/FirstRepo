@@ -69,21 +69,78 @@
 // let lastItem = document.querySelector('.list-group-item:last-child');
 // lastItem.style.color = 'blue';
 
-let secondItem = document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.backgroundColor = 'green';
+// let secondItem = document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.backgroundColor = 'green';
 
-let thirdItem = document.querySelector('.list-group-item:nth-child(3)');
-thirdItem.style.display = 'none';
+// let thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+// thirdItem.style.display = 'none';
 
 
-//QUERYSELECTOR ALL
-let titles = document.querySelectorAll('.title');
-console.log(titles)
+// //QUERYSELECTOR ALL
+// let titles = document.querySelectorAll('.title');
+// console.log(titles)
 
-let listItems = document.querySelectorAll('.list-group li');
-listItems[1].style.color = 'green';
+// let listItems = document.querySelectorAll('.list-group li');
+// listItems[1].style.color = 'green';
 
-let odd = document.querySelectorAll('li:nth-child(odd)');
-for (let i = 0; i < odd.length; i++) {
-    odd[i].style.backgroundColor = 'green';
-}
+// let odd = document.querySelectorAll('li:nth-child(odd)');
+// for (let i = 0; i < odd.length; i++) {
+//     odd[i].style.backgroundColor = 'green';
+// }
+
+//TRAVERSING THE DOM
+
+let itemList = document.querySelector('#items');
+//parent Element
+console.log(itemList.parentElement);
+itemList.parentElement.style.backgroundColor = '#f4f4f4'
+
+//lastelementchild
+console.log(itemList.lastElementChild);
+itemList.lastElementChild.textContent = 'hello1'
+
+// lastchild
+console.log(itemList.lastChild);
+
+// createchild
+
+
+// firstelementchild
+console.log(itemList.firstElementChild);
+itemList.firstElementChild.textContent = 'hello1'
+
+// firstchild
+console.log(itemList.firstChild);
+
+// nextsibling
+console.log(itemList.nextSibling);
+
+// nextelementsibling
+console.log(itemList.nextElementSibling)
+
+// previoussibling
+console.log(itemList.previousSibling);
+
+// previouselementsibling
+console.log(itemList.previousElementSibling);
+itemList.previousElementSibling.style.color = 'green'
+
+// createelement
+let newDiv = document.createElement('div');
+newDiv.className = 'hello1';
+newDiv.id = 'hello1';
+console.log(newDiv)
+
+// setAttribute
+newDiv.setAttribute('title', 'Hello Div')
+
+// createtesxtnode
+let newDivText = document.createTextNode('HelloWorld');
+
+// appendchild
+newDiv.appendChild(newDivText);
+
+let container = document.querySelector('header .container');
+let h1 = document.querySelector('header h1');
+
+container.insertBefore(newDiv, h1)
